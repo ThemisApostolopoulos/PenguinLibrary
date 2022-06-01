@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Your Favourite Books</title>
+    <!--<script src = "main.js"></script> -->
+    <link rel="stylesheet" type="text/css" href="css/main.css"> 
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <script src="js/date.js" type="text/javascript"></script>
+    <script src="js/test.js" type="text/javascript"></script>
+    
+    
+</head>
+<body>
+    <header>
+        <section>
+            <h1 id="header-text">Αναζήτηση <span>Βιβλίων</span></h1>
+            <h1 id="second-header-text">Πιο <span id = second-span>εύκολα</span> απο ποτέ</h1>
+        </section>
+       
+    </header>
+
+    <main>
+        <section class="main-section">
+            <h1 class = "main-header">Με την χρήση του penguin randomhouse API η αναζήτη βιβλίων γίνεται πιο εύκολη απο ποτέ!</h1>
+            <a href="http://localhost:5000/books" target="_blank" id="saved-books-link">Click me για να δεις τα αγαπημένα σου!</a>
+            <!-- <a href="favourites.html" target="_blank" id="saved-books-link">Click me για να δεις τα αγαπημένα σου!</a> -->
+            <fieldset>
+                <details>
+                    <summary>Πληροφορίες</summary>
+                    <p>Συμπληρώστε τα κενά αναλόγως την αναζήτηση που θέλετε να κάνετε</p>
+                </details>
+                <form>
+                    <label for="first_name">Όνομα:</label>
+                    <input type="text" required name="first_name"  pattern="[A-Za-z]+" id="first_name" placeholder="Author's Name"/>
+
+                    <label for="book_title">Τίτλος:</label>
+                    <input type="text" required name="book_title"  pattern="[A-Za-z]+" id="book_title" placeholder="Book's title"/>
+
+                   
+
+
+                    <button type="button" id="button">Search</button>
+                </form>
+              </fieldset>
+        </section>
+
+      
+
+        <script id="results-template" type="text/x-handlebars-template">
+            <section>
+                <h1>Αποτελέσματα</h1>
+                <ul class ="results-books">
+                {{#each work}}
+                    <li>{{titleAuth}}, {{workid}}</li>
+                    <button id={{workid}} class="save-button" value = '{"titleAuth":"{{titleAuth}}","workid":"{{workid}}"}'>Save book</button>
+                    <button id={{workid}} class="delete-button" value = '{"titleAuth":"{{titleAuth}}","workid":"{{workid}}"}'>Delete book</button>
+                {{/each}}
+                </ul>
+            </section>
+            </script> 
+
+        <div id="contents">
+
+        </div>
+
+        <section class = "main-footer">
+            <h1>Βρες βιβλία με μία αναζήτηση</h1>
+            <p>This site is powered by <a href="http://www.penguinrandomhouse.biz/webservices/rest/">penguin randomhouse REST API</a></p>
+        </section>
+    </main>
+    <footer>
+        <article>
+            <p>Instructions:Input in the search form the title or the author's name you wish to search for.Click search.The app will fetch from the penguinrandomhouse REST API the data and via handlebars those results will be rendered in the index.html page.each search containts max 10 results.each result has a save and delete button.If you click the save button the app will save that particular search result in the saved books category, which can be accessed through a link at the top of the search form.If you click the save button while you have already saved the book, the app will alert you.If you press the delete button and that particular search result is saved at your saved books category, the app will delete it.If you press it and the search result isn't saved, you will be alerted.If you go to the saved books category, you can see your saved books, edit their fields or delete them.
+            </p>
+       </article>
+
+       <article>
+           <p>
+               Technologies used for this project:html,css,node.js,express,handlebars,nodemon
+           </p>
+       </article>
+        <section>
+            <h1>DISCLAIMER</h1>
+            <p>This site was created by Themis apostolopoulos(Themis Apostolopoulos copyright &#169;).All rights are reserved to him</p>
+            <p id="date">Ημερομηνία</p>
+        </section>
+    </footer>
+
+    
+</body>
+</html>

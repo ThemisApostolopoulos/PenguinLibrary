@@ -1,0 +1,18 @@
+<section>
+        <input type="text" placeholder="Book search" id="bookSearch">
+         <button type="button" id="button-search">Search</button>
+</section>
+
+<h1>My books</h1>
+ <ul class ="saved-list">
+{{#each books}}
+    <li>{{titleAuth}}
+        <details>
+            <summary>Κριτική</summary>
+            <p>{{review}}</p>
+        </details>
+    </li>
+    <button id={{workid}} class="edit-button" value = '{"titleAuth":"{{titleAuth}}","workid":"{{workid}}"}'>Edit book</button>
+    <button id={{workid}} class="delete-button" value = '{"titleAuth":"{{titleAuth}}","workid":"{{workid}}"}'>Delete book</button>
+{{/each}}
+</ul>

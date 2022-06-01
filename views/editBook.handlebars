@@ -1,0 +1,14 @@
+<h1 id="workid">{{workid}}</h1>
+<h1>Name:{{titleAuth}}</h1>
+<form id="edit-form">
+    <label for="titleAuth">Όνομα:</label>
+     <input type="text" required name="titleAuth" pattern="[A-Za-z]+" id="titleAuth" placeholder="new Name"/>
+{{!-- 
+    <label for="book_title">Τίτλος:</label>
+    <input type="text" required name="book_title" pattern="[A-Za-z]+" id="book_title" placeholder="Book's title"/> --}}
+
+    <label for="review">Κριτική:</label>
+    <textarea rows="4" cols="50" name="review" form="edit-form" placeholder="Book's review" id="review">
+    </textarea>
+    <button type="button" id="button-edit">Edit</button>
+</form>
