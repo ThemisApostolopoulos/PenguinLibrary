@@ -11,23 +11,23 @@ The idea behind this project, was to familiarize myself with node,js and express
 -Delete the books from the favorite list
 
 ## Some screenshos of the app
-![Main Page](/screenshots/Screenshot_37.png)
+![Main Page](/assetsReadMe/Screenshot_37.png)
 
-![Search Result](/screenshots/Screenshot_38.png)
+![Search Result](/assetsReadMe/Screenshot_38.png)
 
-![Saving an already saved book](/screenshots/Screenshot_39.png)
+![Saving an already saved book](/assetsReadMe/Screenshot_39.png)
 
-![Deleting a book which isnt saved](/screenshots/Screenshot_40.png)
+![Deleting a book which isnt saved](/assetsReadMe/Screenshot_40.png)
 
-![Saved/Favorite books](/screenshots/Screenshot_41.png)
+![Saved/Favorite books](/assetsReadMe/Screenshot_41.png)
 
-![Editing a saved book](/screenshots/Screenshot_42.png)
+![Editing a saved book](/assetsReadMe/Screenshot_42.png)
 
-![Edited book with a review](/screenshots/Screenshot_43.png)
+![Edited book with a review](/assetsReadMe/Screenshot_43.png)
 
-![Book search result from saved books](/screenshots/Screenshot_44.png)
+![Book search result from saved books](/assetsReadMe/Screenshot_44.png)
 
-![Deleted Tyler the creator: Flower boy](/screenshots/Screenshot_45.png)
+![Deleted Tyler the creator: Flower boy](/assetsReadMe/Screenshot_45.png)
 
 ## Instructions to run the project
 First of all, you have to install the npm modules, through the command "npm install"
